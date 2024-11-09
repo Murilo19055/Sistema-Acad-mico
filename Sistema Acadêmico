@@ -55,7 +55,7 @@ int main (){
       		printf("Quantas faltas o aluno teve? \n");
       		scanf("%d", &faltas);
       		  if (faltas > 10){
-      		  	 printf(" \t +-------------------------------+ \n");
+      		     printf(" \t +-------------------------------+ \n");
       		     printf(" \t | O aluno reprovará por falta!  | \n");
       		     printf(" \t +-------------------------------+ \n");
       	    } else if (faltas == 10){
