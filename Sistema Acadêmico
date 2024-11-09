@@ -1,0 +1,139 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+
+
+int main (){
+	setlocale(LC_ALL, "Portuguese");
+	
+    char login[20], senha[20], verlog[20], versenha[20];
+    int verificar,ok,erro=0;
+    char nome[100];
+    int dados,faltas;
+    
+    //Cadastro do usuario
+    printf("- Cadastre seu login:\n");
+    scanf("%19s",login);//Limite de caracteres lidos
+    
+    printf("- Cadastre sua senha:\n");
+    scanf("%19s",senha);
+
+    printf("\t Obrigado,login e senha cadastradas!\n");
+    
+    
+    while(erro<=2){
+    printf("- Digite seu login:\n");
+    scanf("%19s",verlog);
+    
+    printf("- Digite sua senha:\n");
+    scanf("%19s",versenha);
+    
+    //ComparaÃ§Ã£o de strings
+    ok=strcmp(login,verlog);
+    verificar=strcmp(senha,versenha);
+    
+     if(ok==0 && verificar==0){
+        printf("\t Bem vindo %s! \n", login);
+        printf("Digite o nome completo do aluno: \n"); 
+        scanf(" %[^\n]", nome);
+        
+  
+    
+    do{
+    
+    	printf("Escolha uma opção: \n");
+    	printf("1 - Frequência \n");
+    	printf("2 - Avaliações \n");
+    	printf("3 - Atividades\n");
+    	printf("4 - Sair\n");
+    	scanf("%d", &dados);
+    
+      
+      switch(dados){
+      	case 1 :
+      		printf("Quantas faltas o aluno teve? \n");
+      		scanf("%d", &faltas);
+      		  if (faltas > 10){
+      		  	 printf(" \t +-------------------------------+ \n");
+      		     printf(" \t | O aluno reprovará por falta!  | \n");
+      		     printf(" \t +-------------------------------+ \n");
+      	    } else if (faltas == 10){
+      	    	 printf(" \t +-------------------------------------+ \n");
+      	    	 printf(" \t | O aluno atingiu o limite de faltas! | \n");
+      	    	 printf(" \t +-------------------------------------+ \n");
+		    } else { 
+		         printf("\t +-----------------------------------------+ \n");
+		         printf("\t | O aluno não atingiu o limite de faltas! | \n");
+		         printf("\t +-----------------------------------------+ \n");
+			}
+			break;
+        
+		case 2 : 
+		    printf("\t +----------------------------------+ \n");
+		    printf("\t | Relatório de Avaliações do Aluno | \n");
+			printf("\t +----------------------------------+ \n");	
+      		printf("\t | Matéria: Biologia   | Nota: 70   | \n");
+      		printf("\t |__________________________________| \n");
+      		printf("\t | Matéria: Matemática | Nota: 65   | \n");
+      		printf("\t |__________________________________| \n");
+      		printf("\t | Matéria: Português  | Nota: 89   | \n");
+      		printf("\t |__________________________________| \n");
+      		printf("\t | Matéria: Física     | Nota: 95   | \n");
+      		printf("\t |__________________________________| \n");
+      		printf("\t | Matéria: Química    | Nota: 41   | \n");
+      		printf("\t |__________________________________| \n");
+      		printf("\t | Matéria: História   | Nota: 37   | \n");
+      		printf("\t |__________________________________| \n");
+      		printf("\t | Matéria: Geografia  | Nota: 48   | \n");
+      		printf("\t +----------------------------------+ \n");
+      		break;
+      	
+      	case 3 : 
+      	    printf("\t +---------------------------------------+ \n");
+      	    printf("\t |    Relátorio de Atividades do Aluno   | \n");
+      	    printf("\t +---------------------------------------+ \n");
+      	    printf("\t | Atividade 1  | Situação: Entregue     | \n");
+      	    printf("\t |_______________________________________| \n");
+      	    printf("\t | Atividade 2  | Situação: Não entregue | \n");
+      	    printf("\t |_______________________________________| \n");
+      	    printf("\t | Atividade 3  | Situação: Entregue     | \n");
+      	    printf("\t |_______________________________________| \n");
+      	    printf("\t | Atividade 4  | Situação: Entregue     | \n");
+      	    printf("\t |_______________________________________| \n");
+      	    printf("\t | Atividade 5  | Situação: Entregue     | \n");
+      	    printf("\t |_______________________________________| \n");
+      	    printf("\t | Atividade 6  | Situação: Não entregue | \n");
+      	    printf("\t |_______________________________________| \n");
+      	    printf("\t | Atividade 7  | Situação: Não entregue | \n");
+      	    printf("\t |_______________________________________| \n");
+      	    printf("\t | Atividade 8  | Situação: Entregue     | \n");
+      	    printf("\t |_______________________________________| \n");
+      	    printf("\t | Atividade 9  | Situação: Não entregue | \n");
+      	    printf("\t |_______________________________________| \n");
+      	    printf("\t | Atividade 10 | Situação: Entregue     | \n");
+      	    printf("\t +---------------------------------------+ \n");
+      	    break;
+      	     
+		case 4:
+		    printf("Saindo do programa...\n");
+		    break;
+		    
+		default:
+		    printf("Opçao Inválida! Tente novamente.\n");
+      }	    
+	    }while(dados!=4);
+        
+        
+        
+        
+        
+     }else {
+        printf(" Usuário ou senha incorretos,Por favor, tente novamente.\n\t APÓS TRÊS ERROS O ACESSO SERÁ BLOQUEADO!\n");
+        erro++;
+     }
+    }
+    printf("\n\t Bloqueado! Entre em contato com a Secretária para redefinir o padrão.");
+    return 0;
+}
+    
