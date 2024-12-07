@@ -1,139 +1,399 @@
 #include <stdio.h>
+
+int main() {
+    // Variáveis para armazenar as respostas
+    int idade, tempoInstituicao, frequencia, meio, tecnologia, problemas, desafios, conhecimento;
+
+    // Pergunta 1: Qual sua idade?
+    printf("Qual sua idade?\n");
+    printf("1. Menos de 18 anos\n");
+    printf("2. 18-25 anos\n");
+    printf("3. 26-35 anos\n");
+    printf("4. 36-45 anos\n");
+    printf("5. Acima de 45 anos\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &idade);
+
+    // Tomada de decisão para a idade
+    if (idade == 1) {
+        printf("Você tem menos de 18 anos.\n");
+    } else if (idade == 2) {
+        printf("Você tem entre 18 e 25 anos.\n");
+    } else if (idade == 3) {
+        printf("Você tem entre 26 e 35 anos.\n");
+    } else if (idade == 4) {
+        printf("Você tem entre 36 e 45 anos.\n");
+    } else if (idade == 5) {
+        printf("Você tem mais de 45 anos.\n");
+    } else {
+        printf("Opção inválida!\n");
+    }
+
+    // Pergunta 2: Qual seu cargo/função na instituição acadêmica?
+    printf("\nQual seu cargo/função na instituição acadêmica?\n");
+    printf("1. Professor\n");
+    printf("2. Coordenador Pedagógico\n");
+    printf("3. Funcionário administrativo\n");
+    printf("4. Outro\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &tempoInstituicao);
+
+    // Tomada de decisão para o cargo
+    switch (tempoInstituicao) {
+        case 1:
+            printf("Você é Professor.\n");
+            break;
+        case 2:
+            printf("Você é Coordenador Pedagógico.\n");
+            break;
+        case 3:
+            printf("Você é Funcionário administrativo.\n");
+            break;
+        case 4:
+            printf("Outro cargo.\n");
+            break;
+        default:
+            printf("Opção inválida!\n");
+            break;
+    }
+
+    // Pergunta 3: Há quanto tempo você está vinculado a essa instituição?
+    printf("\nHá quanto tempo você está vinculado a essa instituição?\n");
+    printf("1. Menos de 1 ano\n");
+    printf("2. 1-3 anos\n");
+    printf("3. 4-7 anos\n");
+    printf("4. Mais de 7 anos\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &tempoInstituicao);
+
+    if (tempoInstituicao == 1) {
+        printf("Você está vinculado à instituição há menos de 1 ano.\n");
+    } else if (tempoInstituicao == 2) {
+        printf("Você está vinculado à instituição há 1-3 anos.\n");
+    } else if (tempoInstituicao == 3) {
+        printf("Você está vinculado à instituição há 4-7 anos.\n");
+    } else if (tempoInstituicao == 4) {
+        printf("Você está vinculado à instituição há mais de 7 anos.\n");
+    } else {
+        printf("Opção inválida!\n");
+    }
+
+    // Pergunta 4: Com que frequência você lida com inscrições de estudantes, relatórios acadêmicos ou monitoramento de frequência?
+    printf("\nCom que frequência você lida com inscrições de estudantes, relatórios acadêmicos ou monitoramento de frequência?\n");
+    printf("1. Diariamente\n");
+    printf("2. Semanalmente\n");
+    printf("3. Mensalmente\n");
+    printf("4. Raramente\n");
+    printf("5. Nunca\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &frequencia);
+
+    switch (frequencia) {
+        case 1:
+            printf("Você lida com essas tarefas diariamente.\n");
+            break;
+        case 2:
+            printf("Você lida com essas tarefas semanalmente.\n");
+            break;
+        case 3:
+            printf("Você lida com essas tarefas mensalmente.\n");
+            break;
+        case 4:
+            printf("Você lida com essas tarefas raramente.\n");
+            break;
+        case 5:
+            printf("Você nunca lida com essas tarefas.\n");
+            break;
+        default:
+            printf("Opção inválida!\n");
+            break;
+    }
+
+    // Pergunta 5: Qual o principal meio que você utiliza para realizar essas tarefas atualmente?
+    printf("\nQual o principal meio que você utiliza para realizar essas tarefas atualmente?\n");
+    printf("1. Planilhas (Excel, Google Sheets)\n");
+    printf("2. Sistemas internos da instituição\n");
+    printf("3. Processos manuais (papel, e-mail)\n");
+    printf("4. Outro\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &meio);
+
+    switch (meio) {
+        case 1:
+            printf("Você usa Planilhas (Excel, Google Sheets).\n");
+            break;
+        case 2:
+            printf("Você usa Sistemas internos da instituição.\n");
+            break;
+        case 3:
+            printf("Você usa Processos manuais (papel, e-mail).\n");
+            break;
+        case 4:
+            printf("Outro meio.\n");
+            break;
+        default:
+            printf("Opção inválida!\n");
+            break;
+    }
+
+    // Pergunta 6: Você utiliza alguma ferramenta tecnológica para facilitar o seu trabalho? (Sim = 1 / Não = 0)
+    printf("\nVocê utiliza alguma ferramenta tecnológica para facilitar o seu trabalho? (Sim = 1 / Não = 0): ");
+    scanf("%d", &tecnologia);
+
+    if (tecnologia == 1) {
+        printf("Quais ferramentas você utiliza?\n");
+        printf("Digite o número correspondente a ferramenta:\n");
+        printf("1. Ferramenta A\n");
+        printf("2. Ferramenta B\n");
+        printf("3. Ferramenta C\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &desafios);
+        
+        switch (desafios) {
+            case 1:
+                printf("Você usa a Ferramenta A.\n");
+                break;
+            case 2:
+                printf("Você usa a Ferramenta B.\n");
+                break;
+            case 3:
+                printf("Você usa a Ferramenta C.\n");
+                break;
+            default:
+                printf("Ferramenta inválida.\n");
+                break;
+        }
+    } else {
+        printf("Você não utiliza ferramentas tecnológicas.\n");
+    }
+
+    // Pergunta 7: Você já teve problemas com erros manuais em alguma dessas atividades? (Sim = 1 / Não = 0)
+    printf("\nVocê já teve problemas com erros manuais em alguma dessas atividades? (Sim = 1 / Não = 0): ");
+    scanf("%d", &problemas);
+
+    if (problemas == 1) {
+        printf("Quais problemas você enfrentou?\n");
+        printf("1. Erro de cálculo\n");
+        printf("2. Falta de organização\n");
+        printf("3. Outro\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &desafios);
+
+        switch (desafios) {
+            case 1:
+                printf("Você enfrentou erro de cálculo.\n");
+                break;
+            case 2:
+                printf("Você enfrentou falta de organização.\n");
+                break;
+            case 3:
+                printf("Outro problema.\n");
+                break;
+            default:
+                printf("Problema inválido.\n");
+                break;
+        }
+    } else {
+        printf("Você não teve problemas com erros manuais.\n");
+    }
+
+    // Pergunta 8: Como você avalia seu nível de conhecimento em tecnologias digitais?
+    printf("\nComo você avalia seu nível de conhecimento em tecnologias digitais?\n");
+    printf("1. Iniciante\n");
+    printf("2. Intermediário\n");
+    printf("3. Avançado\n");
+    printf("4. Especialista\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &conhecimento);
+
+    switch (conhecimento) {
+        case 1:
+            printf("Você é iniciante em tecnologias digitais.\n");
+            break;
+        case 2:
+            printf("Você tem conhecimento intermediário em tecnologias digitais.\n");
+            break;
+        case 3:
+            printf("Você é avançado em tecnologias digitais.\n");
+            break;
+        case 4:
+            printf("Você é especialista em tecnologias digitais.\n");
+            break;
+        default:
+            printf("Opção inválida.\n");
+            break;
+    }
+
+    return 0;
+}
+
+
+
+
+
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
 
+int main() {
+    setlocale(LC_ALL, "Portuguese");
 
-int main (){
-	setlocale(LC_ALL, "Portuguese");
-	
+    // Variáveis de controle
     char login[20], senha[20], verlog[20], versenha[20];
-    int verificar,ok,erro=0;
+    int verificar, ok, erro = 0;
     char nome[100];
-    int dados,faltas;
+    int dados, faltas;
     
-    //Cadastro do usuario
+    // Variáveis de notas e atividades
+    int nota_biologia = 70, nota_matematica = 65, nota_portugues = 89, nota_fisica = 95;
+    int nota_quimica = 41, nota_historia = 37, nota_geografia = 48;
+    
+    int atividade_1 = 1, atividade_2 = 0, atividade_3 = 1, atividade_4 = 1;
+    int atividade_5 = 1, atividade_6 = 0, atividade_7 = 0, atividade_8 = 1;
+    int atividade_9 = 0, atividade_10 = 1;
+
+    // Cadastro do usuário
     printf("- Cadastre seu login:\n");
-    scanf("%19s",login);//Limite de caracteres lidos
+    scanf("%19s", login); // Limite de caracteres lidos
     
     printf("- Cadastre sua senha:\n");
-    scanf("%19s",senha);
+    scanf("%19s", senha);
+    
+    printf("\t Obrigado, login e senha cadastradas!\n");
 
-    printf("\t Obrigado,login e senha cadastradas!\n");
-    
-    
-    while(erro<=2){
-    printf("- Digite seu login:\n");
-    scanf("%19s",verlog);
-    
-    printf("- Digite sua senha:\n");
-    scanf("%19s",versenha);
-    
-    //ComparaÃ§Ã£o de strings
-    ok=strcmp(login,verlog);
-    verificar=strcmp(senha,versenha);
-    
-     if(ok==0 && verificar==0){
-        printf("\t Bem vindo %s! \n", login);
-        printf("Digite o nome completo do aluno: \n"); 
-        scanf(" %[^\n]", nome);
-        
-  
-    
-    do{
-    
-    	printf("Escolha uma opção: \n");
-    	printf("1 - Frequência \n");
-    	printf("2 - Avaliações \n");
-    	printf("3 - Atividades\n");
-    	printf("4 - Sair\n");
-    	scanf("%d", &dados);
-    
-      
-      switch(dados){
-      	case 1 :
-      		printf("Quantas faltas o aluno teve? \n");
-      		scanf("%d", &faltas);
-      		  if (faltas > 10){
-      		     printf(" \t +-------------------------------+ \n");
-      		     printf(" \t | O aluno reprovará por falta!  | \n");
-      		     printf(" \t +-------------------------------+ \n");
-      	    } else if (faltas == 10){
-      	    	 printf(" \t +-------------------------------------+ \n");
-      	    	 printf(" \t | O aluno atingiu o limite de faltas! | \n");
-      	    	 printf(" \t +-------------------------------------+ \n");
-		    } else { 
-		         printf("\t +-----------------------------------------+ \n");
-		         printf("\t | O aluno não atingiu o limite de faltas! | \n");
-		         printf("\t +-----------------------------------------+ \n");
-			}
-			break;
-        
-		case 2 : 
-		    printf("\t +----------------------------------+ \n");
-		    printf("\t | Relatório de Avaliações do Aluno | \n");
-			printf("\t +----------------------------------+ \n");	
-      		printf("\t | Matéria: Biologia   | Nota: 70   | \n");
-      		printf("\t |__________________________________| \n");
-      		printf("\t | Matéria: Matemática | Nota: 65   | \n");
-      		printf("\t |__________________________________| \n");
-      		printf("\t | Matéria: Português  | Nota: 89   | \n");
-      		printf("\t |__________________________________| \n");
-      		printf("\t | Matéria: Física     | Nota: 95   | \n");
-      		printf("\t |__________________________________| \n");
-      		printf("\t | Matéria: Química    | Nota: 41   | \n");
-      		printf("\t |__________________________________| \n");
-      		printf("\t | Matéria: História   | Nota: 37   | \n");
-      		printf("\t |__________________________________| \n");
-      		printf("\t | Matéria: Geografia  | Nota: 48   | \n");
-      		printf("\t +----------------------------------+ \n");
-      		break;
-      	
-      	case 3 : 
-      	    printf("\t +---------------------------------------+ \n");
-      	    printf("\t |    Relátorio de Atividades do Aluno   | \n");
-      	    printf("\t +---------------------------------------+ \n");
-      	    printf("\t | Atividade 1  | Situação: Entregue     | \n");
-      	    printf("\t |_______________________________________| \n");
-      	    printf("\t | Atividade 2  | Situação: Não entregue | \n");
-      	    printf("\t |_______________________________________| \n");
-      	    printf("\t | Atividade 3  | Situação: Entregue     | \n");
-      	    printf("\t |_______________________________________| \n");
-      	    printf("\t | Atividade 4  | Situação: Entregue     | \n");
-      	    printf("\t |_______________________________________| \n");
-      	    printf("\t | Atividade 5  | Situação: Entregue     | \n");
-      	    printf("\t |_______________________________________| \n");
-      	    printf("\t | Atividade 6  | Situação: Não entregue | \n");
-      	    printf("\t |_______________________________________| \n");
-      	    printf("\t | Atividade 7  | Situação: Não entregue | \n");
-      	    printf("\t |_______________________________________| \n");
-      	    printf("\t | Atividade 8  | Situação: Entregue     | \n");
-      	    printf("\t |_______________________________________| \n");
-      	    printf("\t | Atividade 9  | Situação: Não entregue | \n");
-      	    printf("\t |_______________________________________| \n");
-      	    printf("\t | Atividade 10 | Situação: Entregue     | \n");
-      	    printf("\t +---------------------------------------+ \n");
-      	    break;
-      	     
-		case 4:
-		    printf("Saindo do programa...\n");
-		    break;
-		    
-		default:
-		    printf("Opçao Inválida! Tente novamente.\n");
-      }	    
-	    }while(dados!=4);
-        
-        
-        
-        
-        
-     }else {
-        printf(" Usuário ou senha incorretos,Por favor, tente novamente.\n\t APÓS TRÊS ERROS O ACESSO SERÁ BLOQUEADO!\n");
-        erro++;
-     }
+    // Loop para verificar o login do usuário
+    while (erro <= 2) {
+        printf("- Digite seu login:\n");
+        scanf("%19s", verlog);
+
+        printf("- Digite sua senha:\n");
+        scanf("%19s", versenha);
+
+        // Comparação de login e senha
+        ok = strcmp(login, verlog);
+        verificar = strcmp(senha, versenha);
+
+        if (ok == 0 && verificar == 0) {
+            printf("\t Bem-vindo %s! \n", login);
+            printf("Digite o nome completo do aluno: \n");
+            scanf(" %[^\n]", nome);  // Leitura do nome completo
+
+            // Menu de opções
+            do {
+                printf("\nEscolha uma opção: \n");
+                printf("1 - Frequência \n");
+                printf("2 - Avaliações \n");
+                printf("3 - Atividades\n");
+                printf("4 - Sair\n");
+                printf("Escolha: ");
+                scanf("%d", &dados);
+
+                switch (dados) {
+                    case 1:
+                        // Frequência
+                        printf("Quantas faltas o aluno teve? \n");
+                        scanf("%d", &faltas);
+                        if (faltas > 10) {
+                            printf(" \t +-------------------------------+ \n");
+                            printf(" \t | O aluno reprovará por falta!  | \n");
+                            printf(" \t +-------------------------------+ \n");
+                        } else if (faltas == 10) {
+                            printf(" \t +-------------------------------------+ \n");
+                            printf(" \t | O aluno atingiu o limite de faltas! | \n");
+                            printf(" \t +-------------------------------------+ \n");
+                        } else {
+                            printf("\t +-----------------------------------------+ \n");
+                            printf("\t | O aluno não atingiu o limite de faltas! | \n");
+                            printf("\t +-----------------------------------------+ \n");
+                        }
+                        break;
+                    
+                    case 2:
+                        // Avaliações
+                        printf("\t +----------------------------------+ \n");
+                        printf("\t | Relatório de Avaliações do Aluno | \n");
+                        printf("\t +----------------------------------+ \n");
+                        printf("\t | Matéria: Biologia   | Nota: %d   | \n", nota_biologia);
+                        printf("\t | Matéria: Matemática | Nota: %d   | \n", nota_matematica);
+                        printf("\t | Matéria: Português  | Nota: %d   | \n", nota_portugues);
+                        printf("\t | Matéria: Física     | Nota: %d   | \n", nota_fisica);
+                        printf("\t | Matéria: Química    | Nota: %d   | \n", nota_quimica);
+                        printf("\t | Matéria: História   | Nota: %d   | \n", nota_historia);
+                        printf("\t | Matéria: Geografia  | Nota: %d   | \n", nota_geografia);
+                        printf("\t +----------------------------------+ \n");
+                        printf("Deseja alterar as notas? (1 para sim, 0 para não): ");
+                        scanf("%d", &dados);
+                        
+                        if (dados == 1) {
+                            printf("Digite a nova nota de Biologia: ");
+                            scanf("%d", &nota_biologia);
+                            printf("Digite a nova nota de Matemática: ");
+                            scanf("%d", &nota_matematica);
+                            printf("Digite a nova nota de Português: ");
+                            scanf("%d", &nota_portugues);
+                            printf("Digite a nova nota de Física: ");
+                            scanf("%d", &nota_fisica);
+                            printf("Digite a nova nota de Química: ");
+                            scanf("%d", &nota_quimica);
+                            printf("Digite a nova nota de História: ");
+                            scanf("%d", &nota_historia);
+                            printf("Digite a nova nota de Geografia: ");
+                            scanf("%d", &nota_geografia);
+                        }
+                        break;
+
+                    case 3:
+                        // Atividades
+                        printf("\t +---------------------------------------+ \n");
+                        printf("\t | Relatório de Atividades do Aluno     | \n");
+                        printf("\t +---------------------------------------+ \n");
+                        printf("\t | Atividade 1  | Situação: %s     | \n", (atividade_1 == 1) ? "Entregue" : "Não entregue");
+                        printf("\t | Atividade 2  | Situação: %s     | \n", (atividade_2 == 1) ? "Entregue" : "Não entregue");
+                        printf("\t | Atividade 3  | Situação: %s     | \n", (atividade_3 == 1) ? "Entregue" : "Não entregue");
+                        printf("\t | Atividade 4  | Situação: %s     | \n", (atividade_4 == 1) ? "Entregue" : "Não entregue");
+                        printf("\t | Atividade 5  | Situação: %s     | \n", (atividade_5 == 1) ? "Entregue" : "Não entregue");
+                        printf("\t | Atividade 6  | Situação: %s     | \n", (atividade_6 == 1) ? "Entregue" : "Não entregue");
+                        printf("\t | Atividade 7  | Situação: %s     | \n", (atividade_7 == 1) ? "Entregue" : "Não entregue");
+                        printf("\t | Atividade 8  | Situação: %s     | \n", (atividade_8 == 1) ? "Entregue" : "Não entregue");
+                        printf("\t | Atividade 9  | Situação: %s     | \n", (atividade_9 == 1) ? "Entregue" : "Não entregue");
+                        printf("\t | Atividade 10 | Situação: %s     | \n", (atividade_10 == 1) ? "Entregue" : "Não entregue");
+                        
+                        printf("Deseja atualizar o status das atividades? (1 para sim, 0 para não): ");
+                        scanf("%d", &dados);
+                        
+                        if (dados == 1) {
+                            printf("Digite o número da atividade (1 a 10) para alterar o status: ");
+                            scanf("%d", &dados);
+                            printf("Digite o novo status (1 para entregue, 0 para não entregue): ");
+                            if (dados == 1) atividade_1 = 1;
+                            else if (dados == 2) atividade_2 = 1;
+                            else if (dados == 3) atividade_3 = 1;
+                            else if (dados == 4) atividade_4 = 1;
+                            else if (dados == 5) atividade_5 = 1;
+                            else if (dados == 6) atividade_6 = 1;
+                            else if (dados == 7) atividade_7 = 1;
+                            else if (dados == 8) atividade_8 = 1;
+                            else if (dados == 9) atividade_9 = 1;
+                            else if (dados == 10) atividade_10 = 1;
+                        }
+                        break;
+
+                    case 4:
+                        printf("Saindo do programa...\n");
+                        break;
+
+                    default:
+                        printf("Opção Inválida! Tente novamente.\n");
+                }
+
+            } while (dados != 4);
+
+        } else {
+            printf("Usuário ou senha incorretos. Por favor, tente novamente.\n\tAPÓS TRÊS ERROS O ACESSO SERÁ BLOQUEADO!\n");
+            erro++;
+        }
     }
-    printf("\n\t Bloqueado! Entre em contato com a Secretária para redefinir o padrão.");
+    printf("\n\tBloqueado! Entre em contato com a Secretária para redefinir o padrão.");
     return 0;
 }
-    
